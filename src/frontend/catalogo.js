@@ -115,7 +115,8 @@ async function añadirAlCarrito(idProducto) {
     }
 
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    const productoExistente = carrito.find(item => item.id === idProducto);
+    // Comparar ambos como números para evitar duplicados
+    const productoExistente = carrito.find(item => Number(item.id) === Number(idProducto));
 
     // Obtener la imagen correctamente
     let imagenProducto = '';
