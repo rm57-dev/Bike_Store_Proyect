@@ -1,3 +1,33 @@
+// ...existing code...
+document.addEventListener('DOMContentLoaded', () => {
+    const rol = localStorage.getItem('usuarioRol');
+
+    // Si no está autenticado, redirige al login
+    if (!rol) {
+        window.location.href = 'login.html';
+        return;
+    }
+
+    // Si es cliente, oculta opciones de admin
+    if (rol === 'cliente') {
+        // Oculta enlaces de administración
+        const navProductos = document.getElementById('nav-productos');
+        const navReportes = document.getElementById('nav-reportes');
+        const navUsuarios = document.getElementById('nav-usuarios');
+        if (navProductos) navProductos.style.display = 'none';
+        if (navReportes) navReportes.style.display = 'none';
+        if (navUsuarios) navUsuarios.style.display = 'none';
+
+        // Si intenta acceder a una página restringida, redirige al catálogo
+        const paginaRestringida = ['productos.html', 'reportes.html', 'usuarios.html'];
+        if (paginaRestringida.some(p => window.location.pathname.endsWith(p))) {
+            window.location.href = 'catalogo.html';
+        }
+    }
+    // ...resto de tu código...
+});
+
+
 const API_URL = "http://localhost:3000/api";
 const { jsPDF } = window.jspdf;
 

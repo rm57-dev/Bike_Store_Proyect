@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +10,40 @@
         body {
             padding-top: 20px;
         }
+
         .container {
-            max-width: 1200px; /* Aumentar el ancho para más columnas */
+            max-width: 1200px;
+            /* Aumentar el ancho para más columnas */
         }
+
         h1 {
             margin-bottom: 30px;
         }
+
         table {
             margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
+    <!-- Ejemplo de navbar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li id="nav-productos"><a href="productos.html">Productos</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li id="nav-reportes"><a href="reportes.html">Reportes</a></li>
+            <li id="nav-usuarios"><a href="usuarios.html">Usuarios</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div style="text-align: center; margin-top: 32px;">
+    <a href="index.html" style="display: inline-block; background: #007BFF; color: #fff; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+        Volver al Inicio
+    </a>
+</div>
     <div class="container">
         <h1 class="text-center">Usuarios Registrados</h1>
         <div class="table-responsive">
@@ -34,10 +57,11 @@
                         <th>Email</th>
                         <th>Rol</th>
                         <th>Fecha de Registro</th>
-                        <th>Acciones</th> </tr>
+                        <th>Acciones</th>
+                    </tr>
                 </thead>
                 <tbody id="tablaUsuariosBody">
-                    </tbody>
+                </tbody>
             </table>
         </div>
         <p id="mensajeCarga" class="text-center text-muted">Cargando usuarios...</p>
@@ -127,4 +151,5 @@
         document.addEventListener('DOMContentLoaded', cargarUsuarios);
     </script>
 </body>
+
 </html>
