@@ -5,125 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestro Catálogo</title>
-
-    <div style="text-align: center; margin-top: 32px;">
-        <a href="index.html"
-            style="display: inline-block; background: #007BFF; color: #fff; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">
-            Volver al Inicio
-        </a>
-    </div>
-
-    <style>
-        /* Puedes añadir estilos básicos aquí o en un archivo CSS separado */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        #contenedorCards {
-            /* Cambiado de #catalogo-productos a #contenedorCards */
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .card-productos {
-            /* Cambiado de .card-producto a .card-productos */
-            border: 1px solid #ccc;
-            padding: 16px;
-            border-radius: 8px;
-            width: 280px;
-            /* Ancho de la tarjeta */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            box-sizing: border-box;
-            /* Incluye padding y border en el width */
-        }
-
-        .imagen-productos {
-            /* Cambiado de .imagen-producto a .imagen-productos */
-            max-width: 100%;
-            height: 200px;
-            /* Altura fija para las imágenes */
-            object-fit: cover;
-            /* Asegura que la imagen cubra el área sin distorsionarse */
-            border-radius: 8px;
-            margin-bottom: 10px;
-            display: block;
-            /* Asegura que la imagen ocupe su propio espacio */
-        }
-
-        .nombre-productos {
-            /* Cambiado de .nombre-producto a .nombre-productos */
-            font-size: 1.2em;
-            margin: 10px 0;
-            color: #333;
-        }
-
-        .descripcion-productos {
-            /* Añadido y alineado con productos.html */
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .precio-productos {
-            /* Cambiado de .precio-producto a .precio-productos */
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #007BFF;
-            margin-bottom: 15px;
-        }
-
-        .btn-add-cart {
-            /* Cambiado de .btn-add-cart a .btn-add-cart (ya era correcto) */
-            background-color: #28a745;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-add-cart:hover {
-            background-color: #218838;
-        }
-    </style>
+    <link rel="stylesheet" href="catalogo.css">
 </head>
 
 <body>
-    <!-- Ejemplo de navbar -->
-<nav>
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li id="nav-productos"><a href="productos.html">Productos</a></li>
-    <li><a href="catalogo.html">Catálogo</a></li>
-    <li id="nav-reportes"><a href="reportes.html">Reportes</a></li>
-    <li id="nav-usuarios"><a href="usuarios.html">Usuarios</a></li>
-    <li><a href="carrito.html">Carrito</a></li>
-    <li><a href="login.html">Login</a></li>
-  </ul>
-</nav>
+    <!-- navbar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li id="nav-productos"><a href="productos.html">Productos</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li id="nav-reportes"><a href="reportes.html">Reportes</a></li>
+            <li id="nav-usuarios"><a href="usuarios.html">Usuarios</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
     <div class="container">
+        <div style="text-align: center; margin-top: 32px;">
+            <a href="index.html"
+                style="display: inline-block; background: #007BFF; color: #fff; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+                Volver al Inicio
+            </a>
+        </div>
         <h1>Nuestro Catálogo de Productos</h1>
-
+        
         <div id="contenedorCards"> </div>
     </div>
 
