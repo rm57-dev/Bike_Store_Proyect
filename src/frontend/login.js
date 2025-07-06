@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const usuarioId = localStorage.getItem('usuarioId');
     if (usuarioId) {
         // Si ya está autenticado, redirigir a la página principal
-        window.location.href = 'productos.html';
+        window.location.href = 'index.html';
     }
 });
 
@@ -49,7 +49,7 @@ async function manejarLogin(e) {
             
             // Redirigir a la página principal
             setTimeout(() => {
-                window.location.href = 'productos.html';
+                window.location.href = 'index.html';
             }, 1000);
         } else {
             mostrarMensaje(resultado.message, false);
